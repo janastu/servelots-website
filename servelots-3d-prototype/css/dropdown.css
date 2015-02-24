@@ -1,0 +1,78 @@
+
+.blue span {
+    background: none repeat scroll 0 0 #081657;
+}
+.line span {
+    display: inline-block;
+    padding: 1px 45px;
+    vertical-align: middle;
+}
+
+
+
+
+
+.site-notice-bar::before, .site-notice-bar {
+    transition: all 300ms ease-out;
+    position: relative;
+    display: block;
+    background-color: #657bc5;
+    color: black;
+    border: solid .2rem #657bc5;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.site-notice-bar {
+    width: 90%;
+    padding: 1rem;
+    margin: 10rem auto 3rem;
+    box-shadow: 0 0 1rem #657bc5;
+    border: solid .2rem #657bc5;
+    border-radius: .5rem;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+.site-notice-bar > p {
+    margin: 1rem auto;
+    max-width: 90%;
+}
+
+@media screen and (min-width: 921px) {
+
+    .site-notice-bar::before, .site-notice-bar {
+        position: absolute;
+        border-top: none;
+        border-bottom-right-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+        padding: 0;
+    }
+
+    .site-notice-bar::before {
+        content: attr(data-tab-text);
+        left: 50%;
+        margin-top: 12rem;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        z-index: 100;
+        display: block;
+    }
+
+    .site-notice-bar {
+        top: 0;
+        margin-top: -12rem;
+        height: 12rem;
+        width: 70%;
+        left: 15%;
+        z-index: 101;
+        -khtml-opacity: 0.66;
+        opacity: 0.66;
+    }
+
+    .site-notice-bar:hover {
+        margin: 0;
+        -khtml-opacity: 1;
+        opacity: 1;
+    }
+}
