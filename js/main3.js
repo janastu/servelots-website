@@ -268,7 +268,7 @@
 		servelotslogo_physics.position.set(-182.258,-50.7813,-161.278);
 		servelotslogo_physics.scale.set(3, 3, 3);
 		servelotslogo_physics.rotation.set(1.6, 0, 0);
-		scene.add (servelotslogo_physics);
+		//scene.add (servelotslogo_physics);
 		
 		
 		servelotslogo4 = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { color:0x081657} ) );
@@ -279,7 +279,11 @@
 		servelotslogo4.position.set(-403.40,30,-560.255);
 		servelotslogo4.rotation.set(1.55,0,-0.18);
 		
-		
+		domEvents.addEventListener(servelotslogo4, 'click', function(event){
+				
+				document.getElementById("1").click();
+				
+				}, false); 
 				/*domEvents.addEventListener(servelotslogo4, 'click', function(event){
 					controls.enabled = false;
 				trans_control.attach(servelotslogo4);
@@ -309,6 +313,11 @@
 		servelotslogo5.position.set(-403.40,30,-572.255);
 		servelotslogo5.rotation.set(1.55,0,-0.18);
 		servelotslogo5.scale.set(20,20,20);
+		domEvents.addEventListener(servelotslogo5, 'click', function(event){
+				
+				document.getElementById("1").click();
+				
+				}, false); 
 				domEvents.addEventListener(servelotslogo5, 'click', function(event){
 					/*controls.enabled = false;
 				trans_control.attach(servelotslogo5);
@@ -709,7 +718,7 @@
 		scene.add(trans_control);
 		controls = new THREE.OrbitControls(camera, renderer.domElement);
 		//controls.noPan = false;
-		controls.noZoom = false;
+		controls.noZoom = true;
 		controls.minDistance = -200;
 		controls.maxDistance = Infinity;
 		controls.minPolarAngle = 0.6;
@@ -789,7 +798,7 @@
 				//document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 
 				//resize
-				window.addEventListener( 'resize', onWindowResize, false );
+				//window.addEventListener( 'resize', onWindowResize, false );
 
 			}
 //end of init()
@@ -974,13 +983,13 @@ domEvents.addEventListener(tech_box, 'click', function(event){
 
 			function onWindowResize() {
 
-				windowHalfX = document.getElementById("render").offsetWidth / 2;
-				windowHalfY = window.innerHeight / 2;
+				//windowHalfX = document.getElementById("render").offsetWidth / 2;
+				//windowHalfY = window.innerHeight / 2;
 
-				camera.aspect = document.getElementById("render").offsetWidth / window.innerHeight;
+				//camera.aspect = document.getElementById("render").offsetWidth / window.innerHeight;
 				
 
-				renderer.setSize( document.getElementById("render").offsetWidth, window.innerHeight );
+				//renderer.setSize( document.getElementById("render").offsetWidth, window.innerHeight );
 
 			}
 

@@ -32,7 +32,7 @@
 		<style>
 			body {
 				font-family: Monospace;
-				background-color: #657bc5;
+				background-color: #657bc4;
 				margin: 0px;
 				
 				
@@ -62,24 +62,49 @@
 				
 			}
 			
-			#nav-bar {
-				
-				
+			
+			a{
+				color: #000000;
 			}
-			a:link {
-    color: #000000;
+			a:hover {cursor: pointer;}
+		
+		p{color:#F7F5F6 }
+		.navbar li:hover {
+    cursor: pointer;
+}
+.navbar-brand:hover {
+    cursor: pointer;
 }
 
-/* visited link */
-a:visited {
-	color: #FFFFFF;
-    
-}
-		
 	
 		</style>
 	</head>
 	<body>
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"> Hi there</h4>
+      </div>
+      <div class="modal-body">
+      It appears your browser does not support WebGL or is disabled. <br><a style="color: blue" href="2d.html">Click here</a> to go our static page.
+      
+      </div>
+          </div>
+  </div>
+</div>
+
+		<script>
+			if ( ! Detector.webgl ) {
+				//Detector.addGetWebGLMessage();
+				$('#myModal1').modal('show') ;
+				
+				console.log("detector");
+			}
+				
+		
+			</script>
 		
 		
 <nav class="navbar navbar-default" id="nav-bar">
@@ -138,10 +163,11 @@ a:visited {
 			<div class="col-md-3"  id="info-panel" >
 				<div id="home1">
 					<center><br><img src="img/logo.gif"></img>
-					<br><br><h4>Servelots is a web service provider for Small to Medium Enterprises.
+					<br><br><p>Servelots is a web service provider for Small to Medium Enterprises.</p>
 								<br><br>
-					 Servelots was founded in 1999 by a group of Computer Scientists who wanted to provide a highly cost effective but user friendly software for SME's with a special focus on the organizations working in the social development sectors.
-					</center> <br>
+					 <p>Servelots was founded in 1999 by a group of Computer Scientists who wanted to provide a highly cost effective but user friendly software for SME's with a special focus on the organizations working in the social development sectors.</p>
+					</center> <div align="right"><a onclick=introfn()>...More</a></div>
+					<br>
 						<div class="line blue">
 							<center><span></span><span></span><span></span> </center>
 							<br>
@@ -163,23 +189,6 @@ a:visited {
 	
 		
 		
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Hi there</h4>
-      </div>
-      <div class="modal-body">
-      use the mouse to look around. 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-       
-      </div>
-    </div>
-  </div>
-</div>
 		
 
 
@@ -225,29 +234,30 @@ a:visited {
 
 
 $('#1').click(function(){
-    $('#home1').html( " <center><br><img src='img/logo.gif'></img> <br><br><h4>Servelots is a web service provider for Small to Medium Enterprises.<br><br>Servelots was founded in 1999 by a group of Computer Scientists who wanted to provide a highly cost effective but user friendly software for SME's with a special focus on the organizations working in the social development sectors.</center><br><div class='line blue'><center><span></span><span></span><span></span> </center><br></div>");
+    $('#home1').html( " <center><br><img src='img/logo.gif'></img> <br><br><p>Servelots is a web service provider for Small to Medium Enterprises.</p><br><br><p>Servelots was founded in 1999 by a group of Computer Scientists who wanted to provide a highly cost effective but user friendly software for SME's with a special focus on the organizations working in the social development sectors.</p></center> <div align='right'><a onclick=introfn()>...More</a></div> <br><div class='line blue'><center><span></span><span></span><span></span> </center><br></div>");
     return false;
 });
 
 $('#2').click(function(){
 	click1();
-    $('#home1').html("		<center><button type='button' class='btn btn-default' onclick=researchfn1()>ALIPI</button></center> \
+    $('#home1').html("		<center><p>Servelots does research on technology for society.</p></center><center>\
+<a onclick=researchfn1()><h3>Alipi</h3></a></center> \
 			  <div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
+							\
+					<center> <p>Alipi is a framework to address Web-accessibility for the low-literate.</p></center> <br>\
 							<br>\
-					<center>CONTENT</center> <br>\
-							<br>\
-					<center><button type='button' class='btn btn-default' onclick=researchfn2()>AUGMENTED REAL SPACE</button></center>\
+					<center><a onclick=researchfn2()><h3>Augment real space</h3></a></center>\
 					<div class='line blue'>\
 							<center><span></span><span></span><span></span> </center>\
+							\
+					<center><p>Brings a real world space for web based 3D interaction.</p></center> <br>\
 							<br>\
-					<center>CONTENT</center> <br>\
-							<br>\
-					<center><button type='button' class='btn btn-default' onclick=researchfn3()>Semantic Web </button></center>\
+					<center><a onclick=researchfn3()><h3>Semantic Web </h3></a></center>\
 					<div class='line blue'>\
 							<center><span></span><span></span><span></span> </center>\
-							<br>\
-					<center>CONTENT</center><br>\
+							\
+					<center> <p>A toolset for inter-linking information on the Web.</p></center><br>\
 					<div class='line blue'>\
 							<center><span></span><span></span><span></span> </center>\
 							<br>\
@@ -255,100 +265,118 @@ $('#2').click(function(){
     return false;
 });
 
-function researchfn1() {  $('#home1').html("<center>ALIPI</center></a>\
+function researchfn1() {  $('#home1').html("<center><h2  >Alipi</h2></center></a>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
 			<br>\
-			<center>CONTENT</center> <br>\
+			<center><p>'aLipi' stands for analphabets, non-literates and low-literates.\
+Smart phones becoming affordable and Internet access by rural agricultural and pastoral nomads is becoming a reality. What would it be to provision content accessibility to non-literates.\
+aLipi is an investigation into creating and managing locally relevant accessible content for communities, this is a web-accessibility project which allows users to re-narrate the Web pages or elements, and to access other users' re-narrations. Thus it changes access to web-content in ways that are relevant for any user, but may be particularly useful to low-literate users and others who are lost in translation.</p>\</center> <br>\
 			<br>");//document.getElementById('home1').innerHTML = "hi";
 };
 
+function introfn() {  $('#home1').html("<center><p>Over the years, the opportunity to work with SME and the social sector has resulted in a certain awareness of the ground realities which have furthered a research engagement.</p></center><br><center> <p>As an open source group, Servelots strives to push code into software commons.\
+While much of the research work comes under the broad banner of technology for society, the technology development work is nurtured by specific application domain needs. \
+</p></center><br>\
+			<div class='line blue'>\
+			<center><span></span><span></span><span></span> </center>\
+			");
+};
 
 
 function researchfn2() { 
 	
-    $('#home1').html("<center>AUGMENTED REAL SPACE</center></a>\
+    $('#home1').html("<center><h2  >Augment real space</h2></center></a>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
 			<br>\
-			<center>CONTENT</center><br>\
+			<center><p>How can a web visitor to be able to walk into an office and start interacting with the objects? How can we provision 3D desktops with interactive objects? What would be a simple process and an optimal technology to capture and virtually deploy real spaces augmented with synthetic objects? How do we handle closed spaces like offices and open spaces like a village or a town? What are the most appropriate technologies for a web based toolset?\
+</p></center><br><center><p>These are some of the questions we are working on.</p></center><br>\
 			<br>");
     
 };
 
 function researchfn3() { 
 	
-    $('#home1').html("<center>Semantic Web </center></a>\
+    $('#home1').html("<center><h2 >Semantic web</h2> </center></a>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
 			<br>\
-			<center>CONTENT</center><br>\
+			<center><p>Social Semantic Web is about bringing human scale along with decentralization protocols where purposeful communities can continuously build and manage community knowledge and connect with other communities for a federated universe. </p>\
+<p>SWeeT Web is a framework for such a social semantic web.</p></center> <center><p>'SWeeT Web' is a term that is used to bring a layer of Semantic Web over the available web content by facilitating annotations with semantics. Alipi, Restory, COWlick are specific applications. <br> You can find out more <a href='http://janastu.org/technoscience/index.php/Sweet_Web' target='_blank'>here</a></p></center><br>\
 			<br>");
 };
 
 $('#3').click(function(){
 	click2();
-    $('#home1').html("<center><button type='button' class='btn btn-default'  onclick=techfn1()>SERIOUS GAMES</button></center>\
+    $('#home1').html("<center><a onclick=techfn1()><h3>Serious games</h3></a></center>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
-			<br>\
-			<center>CONTENT</center> <br>\
-			<center><button type='button' class='btn btn-default'  onclick=techfn2()>VISUAL STORYTELLING</button></center>\
+			\
+			<center><p>Collaborative, game-based learning and problem solving</p></center> <br>\
+			<center><a onclick=techfn2()><h3>Visual storytelling</h3></a></center>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
-			<br>\
-			<center>CONTENT</center> <br>\
-			<center><button type='button' class='btn btn-default'  onclick=techfn3()>WIFI MESH</button></center>\
+			\
+			<center><p>Visual storytelling based on oral narratives and other media on the web.</p></center> <br>\
+			<center><a onclick=techfn3()><h3>Wifi mesh</h3></a></center>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
-			<br>\
-			<center>CONTENT</center>\ <br>\
+			\
+			<center> <p>We aim to setup community owned wifi meshes in rural communities.</p></center>\ <br>\
 			<center><span></span><span></span><span></span></center>");
     return false;
 });
 
 function techfn1() {
 	
-    $('#home1').html("<center>SERIOUS GAMES</center></a>\
+    $('#home1').html("<center><h2  >Serious games</h2></center></a>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
 			<br>\
-			<center>CONTENT</center> <br>\
+			<center><p>Game-based learning and problem solving is increasingly being adopted across communities today in a variety of domains.</p></center><br><center><p> The major challenge is to design serious game environments that facilitate creation of community knowledge as a result of game-playing. Such environments need to support individual learning with knowledge co-creation through analytics, metrics and adaptive strategies. \
+			</p></center><br><center><p>We investigate how to build game-authoring environments that allow games to be (a) modular and configurable, and (b) integrate personal learning with community problem solving. \
+Specifically, location relevant learning for a rural low-literate community on a WiFi mesh.\
+</p></center> <br>\
 			<br>");
 };
 
 function techfn2() {
 	
-    $('#home1').html("<center>VISUAL STORYTELLING</center></a>\
+    $('#home1').html("<center><h2  >Visual storytelling</h2></center></a>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
 			<br>\
-			<center>CONTENT</center> <br>\
-			<br>");
+			<center><p>Restory is an app that lets you tell your story citing various sources from the web.  This means you are not duplicating content off the internet but merely pointing to it. Restory app is an instance of SWeeT Web that aims to encourage review of content on the web in a participatory manner by allowing contextual tagging, syndication of reviews and reviewers.\
+</p></center><br><center><p>An example is at restory.chaha.in/dasara where Prof. Chaluvaraju of Tribal Studies Department, Kannada University, is doing a visual of his narrative of the Dasara festival that is based on available oral narratives of Hampi and Mysore Dasaras, images, maps, videos and audio content at his website chaha.in and other pages on the Web.\
+</p></center> <br>\
+	<br>");
 };
 
 function techfn3() {
 	
-    $('#home1').html("<center>WIFI MESH</center></a>\
+    $('#home1').html("<center><h2  >Wifi mesh</h2></center></a>\
 			<div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
 			<br>\
-			<center>CONTENT</center> <br>\
+			<center><p>India has mobile phone revolution but much of the country remains out of the coverage of telecom providers, particularly the data connectivity. Community Owned Wifi-mesh is likely to enable such segments to connect to each other in sustainable and effective ways. With smart-phones making it easier to bring communication and sharing applications to the people, we can imagine richer experience for rural communities provided these are  low-literate friendly. We are now looking to test and operationalize a model for community owned wireless mesh networks in rural India that can be used for localized data sharing, and later support the Follow the Sheep project with 'Sheep Packs, Sync Mules and Young Shepherds' \
+</p></center><br><center><p>COWlick is a wifi-mesh for location interpretation and capturing cultural practices. See itb.janastu.org for a development trajectory.\
+</p></center> <br>\
 			<br>");
 };
 
 $('#4').click(function(){
 	
-    $('#home1').html("<center><h2>DIRECTIONS</h2></center>\
+    $('#home1').html("<center><h2  >Directions </h2></center>\
 		     <div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>\
-			<br><center>Servelots Infotech Pvt. Ltd.<br>\
+			<br><center><p>Servelots Infotech Pvt. Ltd.<br>\
 3354 KR Road,<br>\
 Bangalore, 560070,<br>\
 Karnataka, INDIA<br>\
 <br>\
 +91-80-2676-2963<br>\
-totomaster @ servelots.com</center><br>\
+totomaster @ servelots.com</center><br></p>\
 <div class='line blue'>\
 			<center><span></span><span></span><span></span> </center>");
     return false;
@@ -367,10 +395,12 @@ function click1() {
 		technologytween();
 		};
 $('#5').click(function(){
-    $('#home1').html(" <center><h2>JANASTU</h2></center>\
+    $('#home1').html(" <center><a href='http://www.janastu.org/' target='_blank'><h2>Janastu</h2></a></center>\
 		     <div class='line blue'>\
 			<center><span></span><span></span><span></span> </center><br>\
-		       <center>content</center>");
+		       <center><p>Janastu is a not-for-profit arm which provides IT services for the voluntary and civil society organizations while promoting the notion of 'software commons'. More information on Janastu can be found at <a href='http://www.janastu.org/' target='_blank'>janastu.org</a > .</p></center>\
+		        <div class='line blue'>\
+			<center><span></span><span></span><span></span> </center><br>");
     return false;
 });
   </script>
@@ -379,8 +409,9 @@ $('#5').click(function(){
 <script>// $('#myModal1').modal('show') ;</script>
 <script> //function modal2(){
 	
-	//$('#myModal2').modal('show');
-	//console.log("hi");}</script>
+	//$('#myModal1').modal('show');
+	//console.log("hi");}
+	</script>
 
 
 
