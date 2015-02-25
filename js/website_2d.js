@@ -9,7 +9,7 @@ function display (selected)
 	}
 	else  if (selected == 'Research') 
 	{
-		document.getElementById("texty").innerHTML = "Servelots does research on technology for society. <br/> Alipi <br/> The Re-narration Web is a framework to address the Web-accessibility for the low-literate. <br/> Augmented Real Spaces <br/> Brings a real world space for web based 3D interaction. <br/> Semantic Web Social Networking <br/> A toolset for inter-linking information on the Web." + selected;
+		document.getElementById("texty").innerHTML = "Servelots does research on technology for society. <br/><a href='#Alipi1'> Alipi</a> <br/> The Re-narration Web is a framework to address the Web-accessibility for the low-literate. <br/> <a href='#Augmented Real Spaces'>Augmented Real Spaces</a><br/> Brings a real world space for web based 3D interaction. <br/> Semantic Web Social Networking <br/> A toolset for inter-linking information on the Web. <br> <a name='Alipi1' id='Alipi1'> <a name='Augmented Real Spaces' id='Augmented Real Spaces'> ";
 		document.getElementById("texty").style.display="block";
 		document.getElementById("home").style.display="none";
 	}
