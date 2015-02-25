@@ -2,14 +2,20 @@ function display (selected)
 {
 	if (selected == 'Janastu')
 	{	
-		var option = "Janastu";
-		document.getElementById("texty").innerHTML = "Text related to " + selected + " project. <br/>" + option.link("http://janastu.org/");
+		var option = "JANASTU";
+		document.getElementById("texty").innerHTML = "Janastu is a not-for-profit arm which provides IT services for the voluntary and civil society organizations while promoting the notion of “software commons”. <br/> More information on Janastu can be found at <br/>" + option.link("http://janastu.org/");
 		document.getElementById("texty").style.display="block";
 		document.getElementById("home").style.display="none";
 	}
-	else 
+	else  if (selected == 'Research') 
 	{
-		document.getElementById("texty").innerHTML = "Text related to " + selected + " project.";
+		document.getElementById("texty").innerHTML = "Servelots does research on technology for society. <br/> Alipi <br/> The Re-narration Web is a framework to address the Web-accessibility for the low-literate. <br/> Augmented Real Spaces <br/> Brings a real world space for web based 3D interaction. <br/> Semantic Web Social Networking <br/> A toolset for inter-linking information on the Web." + selected;
+		document.getElementById("texty").style.display="block";
+		document.getElementById("home").style.display="none";
+	}
+	else  if (selected == 'Technology') 
+	{
+		document.getElementById("texty").innerHTML = "Visual storytelling <br/> Based on oral narratives <br/> Wifi-Mesh <br/> For location interpretation and capturing cultural practices <br/> Serious Games <br/> In learning contexts" + selected ;
 		document.getElementById("texty").style.display="block";
 		document.getElementById("home").style.display="none";
 	}
@@ -27,3 +33,4 @@ function ShowInfo()
 	document.getElementById("texty").style.display="none";
 	document.getElementById("home").style.display="block";
 }
+

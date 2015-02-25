@@ -4,14 +4,13 @@ body
 	background-image: url("../img/2d/servelots_back.jpg");
 	background-repeat: no-repeat;
 	background-size: 3500;
-	font-family: arial;
+	font-family: chewy;
 }
 
 /* Navigation bar */
 .grid_container 
 {
-    padding: 500px 0 0 30px;
-
+    padding: 500px 100px 100px 30px;
 }
 
 /* Project information */
@@ -25,13 +24,13 @@ body
 
 .spacer 
 {
-	height: 350px;
+	height: 500px;
 	text-align: justify;
 }
 
 #texty 
 {
-	height: 250px;
+	height: 380px;
 	margin-top: 50px;
 	padding:20px 400px 20px 400px;
   	background-color: rgba(0, 0, 0, 0.9);
