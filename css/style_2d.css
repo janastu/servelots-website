@@ -95,13 +95,13 @@ body
 
 #texty 
 {
-	height: 250px;
+	height: 260px;
 	margin-top: 50px;
 	padding:10px 15px 10px 15px;
 	text-align: center;
-  	/*background-color: rgba(0, 0, 0, 0.9);
-  	-moz-border-radius: 80px;
-	border-radius: 80px; */
+  	background-color: rgba(0, 0, 0, 0.3);
+  	-moz-border-radius: 75px;
+	border-radius: 75px; 
 }
 
 #home 
