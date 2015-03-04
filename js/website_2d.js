@@ -9,7 +9,7 @@ function display (selected)
 	}
 	else  if (selected == 'Research') 
 	{
-		document.getElementById("texty").innerHTML = "Servelots does research on technology for society. <br/> <a href='#' onClick = Alipi()> Alipi</a> <br/> The Re-narration Web is a framework to address the Web-accessibility for the low-literate. <br/> <a href='#' onClick = Augment()>Augmented Real Spaces</a><br/> Brings a real world space for web based 3D interaction. <br/> <a href='#' onClick=Semantic()>Semantic Web social Networking </a> <br/> A toolset for inter-linking information on the Web. <br> <a name='Alipi1' id='Alipi1'> <a name='Augmented Real Spaces' id='Augmented Real Spaces'> <a name='Semantic Web Social Networking' id='Semantic Web Social Networking'>";
+		document.getElementById("texty").innerHTML = "Servelots does research on technology for society. <br/> <a href='#alipi#' onClick = Alipi()> Alipi</a> <br/> The Re-narration Web is a framework to address the Web-accessibility for the low-literate. <br/> <a href='#' onClick = Augment()>Augmented Real Spaces</a><br/> Brings a real world space for web based 3D interaction. <br/> <a href='#' onClick=Semantic()>Semantic Web social Networking </a> <br/> A toolset for inter-linking information on the Web. <br> <a name='Alipi1' id='Alipi1'> <a name='Augmented Real Spaces' id='Augmented Real Spaces'> <a name='Semantic Web Social Networking' id='Semantic Web Social Networking'>";
 		document.getElementById("texty").style.display="block";
 		document.getElementById("home").style.display="none";
 	}
