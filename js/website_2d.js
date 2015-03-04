@@ -9,13 +9,13 @@ function display (selected)
 	}
 	else  if (selected == 'Research') 
 	{
-		document.getElementById("texty").innerHTML = "Servelots does research on technology for society. <br/> <a href='#Alipi1' onClick = Alipi()> Alipi</a> <br/> The Re-narration Web is a framework to address the Web-accessibility for the low-literate. <br/> <a href='#Augmented Real Spaces' onClick = Augment()>Augmented Real Spaces</a><br/> Brings a real world space for web based 3D interaction. <br/> <a href='#Semantic Web Social Networking' onClick=Semantic()>Semantic Web social Networking </a> <br/> A toolset for inter-linking information on the Web. <br> <a name='Alipi1' id='Alipi1'> <a name='Augmented Real Spaces' id='Augmented Real Spaces'> <a name='Semantic Web Social Networking' id='Semantic Web Social Networking'>";
+		document.getElementById("texty").innerHTML = "Servelots does research on technology for society. <br/> <a href='#' onClick = Alipi()> Alipi</a> <br/> The Re-narration Web is a framework to address the Web-accessibility for the low-literate. <br/> <a href='#' onClick = Augment()>Augmented Real Spaces</a><br/> Brings a real world space for web based 3D interaction. <br/> <a href='#' onClick=Semantic()>Semantic Web social Networking </a> <br/> A toolset for inter-linking information on the Web. <br> <a name='Alipi1' id='Alipi1'> <a name='Augmented Real Spaces' id='Augmented Real Spaces'> <a name='Semantic Web Social Networking' id='Semantic Web Social Networking'>";
 		document.getElementById("texty").style.display="block";
 		document.getElementById("home").style.display="none";
 	}
 	else  if (selected == 'Technology') 
 	{
-		document.getElementById("texty").innerHTML = "<a href = '#Visual Storytelling' onClick = Visual()> Visual Storytelling</a><br/> Based on oral narratives <br/> <a href = '#Wifi-Mesh' onClick = Wifi()> Wifi-Mesh </a> <br/> For location interpretation and capturing cultural practices <br/> <a href = '#Serious Games' onClick = Serious()> Serious Games </a> <br/> In learning contexts. <a name='Visual Storytelling' id='Visual Storytelling'> <a name='Wifi-Mesh' id='Wifi Mesh'><a name='Serious Games' id='Serious Games'>";
+		document.getElementById("texty").innerHTML = "<a href = '#' onClick = Visual()> Visual Storytelling</a><br/> Based on oral narratives <br/> <a href = '#' onClick = Wifi()> Wifi-Mesh </a> <br/> For location interpretation and capturing cultural practices <br/> <a href = '#' onClick = Serious()> Serious Games </a> <br/> In learning contexts. <a name='Visual Storytelling' id='Visual Storytelling'> <a name='Wifi-Mesh' id='Wifi Mesh'><a name='Serious Games' id='Serious Games'>";
 		document.getElementById("texty").style.display="block";
 		document.getElementById("home").style.display="none";
 	}
