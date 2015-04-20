@@ -110,35 +110,6 @@
 
 				
 				
-				// Cube
-				//var geometry = new THREE.BoxGeometry(200,200,200);
-				//var material = new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('negx.jpg')});
-				//cube = new THREE.Mesh(geometry, material);
-				//cube.position.y = 150;
-				//scene.add(cube);
-				var materials = [];
-
-				 {
-
-					
-						materials.push( new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture( 'img/info_cube/posx.jpg' ) }));
-						materials.push( new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture( 'img/info_cube/negx.jpg' ) }));
-						materials.push( new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture( 'img/info_cube/posy.jpg' ) }));
-						materials.push( new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture( 'img/info_cube/negy.jpg' ) }));
-						materials.push( new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture( 'img/info_cube/posz.jpg' ) }));
-						materials.push( new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture( 'img/info_cube/negz.jpg' ) }));
-					
-
-				}
-
-				cube = new Physijs.BoxMesh( new THREE.CubeGeometry( 50, 50, 50,1,1,1,materials ), new THREE.MeshFaceMaterial(materials) );
-				//cube.position.y = 150;
-				//cube.position.set(550,0, 500);
-				cube.position.set(-102.258,-60.7813,-201.278);
-				cube.overdraw = true;
-				cube.rotation.y = 1.6;
-				//scene.add( cube );
-				cube.name = 'cube';
 
 
 				
@@ -159,13 +130,7 @@
 				renderer.setSize( document.getElementById("render").offsetWidth,window.innerHeight );
 				container.appendChild( renderer.domElement );
 				
-				//home button
-				home = new THREE.Mesh(new THREE.BoxGeometry(24, 0.005, 24), new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('img/homi.gif'), transparent:true}));
-				home.position.set(0, 47, -100);
-				home.rotation.set(1.5, 0, 0);
-				home.overdraw = false;
-				//home.scale.set(4,4,4);
-				//scene.add(home);
+				
     	         
 				
 				
@@ -179,7 +144,7 @@
 					'img/panorama/posz.jpg',
 					'img/panorama/negz.jpg'],
 			    
-			    url2 = [ 	],
+			    
             //textureCube = THREE.ImageUtils.loadTextureCube(url),
             //material = new THREE.MeshBasicMaterial({ color: 0xffffff, envMap: textureCube }),
 
@@ -197,15 +162,8 @@
 				side: THREE.FrontSide
 			}));	
 		}
-		for (j = 0; j < 6; j++) {
-			cubeTex2 = THREE.ImageUtils.loadTexture(url2[j]);
-			//cubeTex.offset.x = -.5;
-			//cubeTex.offset.y = -.5;
-			materialArray2.push(new THREE.MeshBasicMaterial({
-				map: cubeTex2,
-				side: THREE.FrontSide
-			}));	
-		}
+			
+		
 		panoMeshMat = new THREE.MeshFaceMaterial(materialArray);
 		panoMeshMat2 = new THREE.MeshFaceMaterial(materialArray2);
 		//var maxAnisotropy = renderer.getMaxAnisotropy();
@@ -254,7 +212,7 @@
 		var modelMesh2, modelMesh3, modelMesh4, modelMesh5;
 		var modelMesh1Click, modelMesh2Click, modelMesh3Click, modelMesh3Click2;
 		//logoMat = new THREE.MeshBasicMaterial({map:new THREE.ImageUtils.loadTexture('img/logo_texture.jpg')});
-		logoMat = new THREE.MeshNormalMaterial( {map:new THREE.ImageUtils.loadTexture('img/logo_texture.jpg')} );
+		//logoMat = new THREE.MeshNormalMaterial( {map:new THREE.ImageUtils.loadTexture('img/logo_texture.jpg')} );
 		loader2 = new THREE.JSONLoader();
 		loader2.load( "objects/servelotslogo4.js", function( geometry, material ) {
  //var model = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( 'texture.jpg' ) } ) );
@@ -767,12 +725,6 @@
 				}, false);
 				
 				*/
-				domEvents.addEventListener(cube, 'click', function(event){
-					document.getElementById("1").click();					
-					//modal2();			
-						//document.getElementById("info").innerHTML="Pantoto-lite, a Web 2.0 platform built with Python/Django which is an adaptation of Pantoto Communities software that was developed earlier over many years using Java and MySQL. The new architecture and design details are available on our WIKI page<br/><br/>Pantoto-lite is to be used as the primary software for various forms and workflow management needs in <br/>a) school information management systems, <br/>b) Surveys and document management for NGOs, and <br/>c) Research and Development work regardnig accessibility of rich Internet applications for print-impaired (people who can see and hear but not comfortable with reading and writing).<br/><br/>Technology, Participation and Communities - a social science study project involving two ICT project deployments, funded by SIRCA.Open Course ware on Principles of Programming - An initiative for effectively and accessibly teaching principles of programming in the Web 2.0 era using a participatory approach. Course material and curriculum with Javascript language that only needs conventional Web browsers for instruction and learning. ";
-						
-			}, false);
 				
 				
 				domEvents.addEventListener(panoMesh, 'click', function(event){
@@ -1301,15 +1253,7 @@ domEvents.addEventListener(tech_box, 'click', function(event){
   //home.position.set(position.x, position.y, position.z);
   //home.lookAt(camera.position);
   //home.rotation.set(camera.rotation.x, camera.rotation.y + 100, camera.rotation.z);
-				if (camera.rotation.x != home.rotation.x && camera.rotation.y != home.rotation.y) {
-					
-				//hometweenfn();
-				//home.rotation.x = camera.rotation.x;
-				//home.rotation.y = camera.rotation.y;
-				//home.rotation.z = camera.rotation.z -100;
-				//console.log("testing");
-					
-				}
+				
 				
 				TWEEN.update();
 				//cube.rotation.x +=0.01;
