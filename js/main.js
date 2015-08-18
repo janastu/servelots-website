@@ -28,6 +28,7 @@
 			var shape5, shape_geo5, shape_mesh5;
 			var keyboard = new THREEx.KeyboardState();
 			var ground_material;
+			var tex1, geo1, mat1, plane1;
 			
 			
 
@@ -179,6 +180,21 @@
         //this.panoMesh.scale.x = 1;
 		scene.add(panoMesh);
 		
+		
+		
+		tex1 = new THREE.ImageUtils.loadTexture('img/logo_probir.jpg');
+	       tex1.generateMipmaps = false;
+	       tex1.minFilter = THREE.LinearFilter;
+	       tex1.magFilter = THREE.LinearFilter;
+               geo1= new THREE.PlaneGeometry(1280,1719);
+               mat1 = new THREE.MeshBasicMaterial ({map:tex1});
+               plane1 = new THREE.Mesh(geo1, mat1);
+               scene.add(plane1);
+	       plane1.position.set(-1403.40,30,-2332.255);
+	       plane1.rotation.set(0,0.15,-0.02);
+	       plane1.scale.set(0.7, 0.7, 0.7);
+	       
+		
 		//screen
 		/*screen1Mat = new THREE.ImageUtils.loadTexture('img/static.gif');
 		
@@ -213,7 +229,7 @@
 		var modelMesh1Click, modelMesh2Click, modelMesh3Click, modelMesh3Click2;
 		//logoMat = new THREE.MeshBasicMaterial({map:new THREE.ImageUtils.loadTexture('img/logo_texture.jpg')});
 		//logoMat = new THREE.MeshNormalMaterial( {map:new THREE.ImageUtils.loadTexture('img/logo_texture.jpg')} );
-		loader2 = new THREE.JSONLoader();
+		/*loader2 = new THREE.JSONLoader();
 		loader2.load( "objects/servelotslogo4.js", function( geometry, material ) {
  //var model = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( 'texture.jpg' ) } ) );
 		 var  logo_material = Physijs.createMaterial(
@@ -251,7 +267,7 @@
 							console.log((servelotslogo4).scale);
 					
 				
-		});*/
+		});
 				
 					
 					
@@ -277,12 +293,12 @@
 				
 				}, false); 
 				domEvents.addEventListener(servelotslogo5, 'click', function(event){
-					/*controls.enabled = false;
+					controls.enabled = false;
 				trans_control.attach(servelotslogo5);
 				trans_control.enabled = true;
 							console.log((servelotslogo5).position);
 							console.log((servelotslogo5).rotation);
-							console.log((servelotslogo5).scale);*/
+							console.log((servelotslogo5).scale);
 					if (servelotslogo4.position.z == -560.255) {
 						//code
 					
@@ -306,7 +322,7 @@
 				}, false);
 		});
 		
-		
+		*/
 		
 		
 		
